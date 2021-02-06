@@ -1,0 +1,50 @@
+<header>
+    <h1>BJJ's Burgers</h1>
+
+    <p>Submit to the best burgers in town! Tap out your hunger with the classic Americana. Or go big with Tripple Flying
+        Triangle. At BJJ's Burgers we grapple with only the freshest ingredients. All you have to do is <span>bump,
+            slap, and tap</span> that burger.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Add a Burger Submission</h2>
+        <form class="create-burger">
+
+            <div class="burger-data">
+                <label for="brgr">New BJJ Burger Name:</label>
+                <input type="text" id="brgr" name="title">
+            </div>
+
+            <div class="burger-data">
+                <label for="devoured">Hungry?</label><br>
+                <input type="radio" name="devoured" value="1" checked> Hungry!<br>
+                <input type="radio" name="devoured" value="0"> Satisfied
+            </div>
+
+            <button type="submit">Submit Burger</button>
+        </form>
+    </section>
+    
+    <div class="status-box">
+        <h2 class="title">Contenders!</h2>
+
+        <ul class="burger-list">
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burger-block devouring=true}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+
+        <h2 class="title">Tapped Out!</h2>
+
+        <ul class="burger-list">
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block devouring=false}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</main>
