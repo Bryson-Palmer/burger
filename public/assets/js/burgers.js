@@ -1,5 +1,14 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
+    
+    // Clear the input field if it has text in it
+    $("#brgr").on("click", function (e) {
+        $("#brgr")
+        .removeClass("border border-danger text-danger")
+        .addClass("border border-dark text-dark")
+        .val("");
+    })
+    
     // PUT request
     $(".devour-it").on("click", function (e) {
         let id = $(this).data("id");
@@ -38,17 +47,36 @@ $(() => {
             devoured: $("[name=devoured]:checked").val().trim()
         };
 
-        // Sed the POST request
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            () => {
-                console.log("Created new BJJ burger");
-                // Reload the page to get the updated list
-                location.reload();
-            }
-        );
+        if(!newBurger.burger_names) {
+            $("#brgr")
+            .slideUp(300)
+            .delay(500)
+            .fadeIn(400)
+            .removeClass("border border-dark text-dark")
+            .addClass("border border-danger text-danger")
+            .val("No invisible burgers");
+            return;
+        } else if($("#brgr").val() === "No invisible burgers") {
+            $("#brgr")
+            .removeClass("border border-dark text-dark")
+            .addClass("border border-dark text-dark")
+            .val("");
+            location.reload();
+            return;
+        } else {
+            // Sed the POST request
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(
+                () => {
+                    console.log("Created new BJJ burger");
+                    // Reload the page to get the updated list
+                    location.reload();
+                }
+            );
+        }
+        
     });
 
     // DELETE requst to delete a burger
