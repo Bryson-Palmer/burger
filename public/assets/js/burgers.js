@@ -30,7 +30,7 @@ $(() => {
         e.preventDefault();
 
         let newBurger = {
-            burgers_name: $("#brgr").val().trim(),
+            burger_names: $("#brgr").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
         };
 

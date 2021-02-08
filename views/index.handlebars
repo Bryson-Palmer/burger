@@ -1,7 +1,8 @@
 <header>
     <h1>BJJ's Burgers</h1>
 
-    <p>Submit to the best burgers in town! Tap out your hunger with the classic Americana. Or go big with Tripple Flying
+    <h2>Submit to the best burgers in town! </h2>
+    <p>Tap out your hunger with the classic Americana. Or go big with Tripple Flying
         Triangle. At BJJ's Burgers we grapple with only the freshest ingredients. All you have to do is <span>bump,
             slap, and tap</span> that burger.</p>
 </header>
@@ -12,22 +13,23 @@
         <form class="create-burger">
 
             <div class="burger-data">
-                <label for="brgr">New BJJ Burger Name:</label>
+                <label for="brgr">Create a new BJJ Burger</label>
                 <input type="text" id="brgr" name="title">
             </div>
 
             <div class="burger-data">
-                <label for="devoured">Hungry?</label><br>
-                <input type="radio" name="devoured" value="1" checked> Hungry!<br>
-                <input type="radio" name="devoured" value="0"> Satisfied
+                <label for="devoured">Are you hungry?</label><br>
+                <input type="radio" name="devoured" value="1" checked> So hungry!<br>
+                <input type="radio" name="devoured" value="0"> I'm all tapped out!
             </div>
 
             <button type="submit">Submit Burger</button>
         </form>
     </section>
-    
+
     <div class="status-box">
         <h2 class="title">Contenders!</h2>
+        <p>These burgers still need to be tapped out.</p>
 
         <ul class="burger-list">
             {{#each burgers}}
@@ -38,6 +40,7 @@
         </ul>
 
         <h2 class="title">Tapped Out!</h2>
+        <p>These burgers have been devoured.</p>
 
         <ul class="burger-list">
             {{#each burgers}}
