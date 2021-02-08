@@ -1,8 +1,12 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
-    $(".devour-it").on("click", (e) => {
+    // PUT request
+    $(".devour-it").on("click", function (e) {
         let id = $(this).data("id");
         let devoured = $(this).data("devoured");
+
+        console.log(id);
+        console.log(devoured);
 
         let devouredState = {
             devoured: devoured
@@ -16,7 +20,7 @@ $(() => {
             data: devouredState
         }).then(
             () => {
-                consolelog("Changed burger status to", devoured);
+                console.log("Changed burger status to", devoured);
                 // Reload the page to get the updated list
                 location.reload();
             }
@@ -25,7 +29,7 @@ $(() => {
 
     // Grabbing form values to create a burger 
     // Then send a POST request
-    $(".create-burger").on("submit", (e) => {
+    $(".create-burger").on("submit", function (e) {
         // Prevent default
         e.preventDefault();
 
@@ -48,8 +52,10 @@ $(() => {
     });
 
     // DELETE requst to delete a burger
-    $("burger-obliviate").on("click", (e) => {
+    $(".burger-obliviate").on("click", function (e) {
         let id = $(this).data("id");
+        console.log("This id is");
+        console.log(id);
 
         // Send the DELETE request
         $.ajax("/api/burgers/" + id, {

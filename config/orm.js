@@ -11,7 +11,7 @@ let printQuestionMarks = (num) => {
         arr.push("?");
     }
 
-    return arr.stString();
+    return arr.toString();
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
