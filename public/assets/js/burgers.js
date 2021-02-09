@@ -7,7 +7,7 @@ $(() => {
         .removeClass("border border-danger text-danger")
         .addClass("border border-dark text-dark")
         .val("");
-    })
+    });
     
     // PUT request
     $(".devour-it").on("click", function (e) {
@@ -61,7 +61,7 @@ $(() => {
             .removeClass("border border-dark text-dark")
             .addClass("border border-dark text-dark")
             .val("");
-            location.reload();
+            // location.reload();
             return;
         } else {
             // Sed the POST request

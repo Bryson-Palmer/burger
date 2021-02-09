@@ -1,13 +1,105 @@
 <header>
-    <h1>BJJ's Burgers</h1>
+    <div class="title-container d-flex flex-column align-items-center">
+        <h1 id="bjjHeader" class="">BJJ's Burgers</h1>
+        <img src="../assets/images/redBelt.png" alt="BJJ red belt" class="redBelt" width="150px" height="75px">
+    </div>
 
+    {{!-- Carousel wrapper --}}
+    <div id="burger-carousel" class="carousel slide" data-bs-ride="carousel">
+
+        {{!-- Indicators --}}
+        <ol class="carousel-indicators">
+            <li data-target="#burger-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#burger-carousel" data-slide-to="1"></li>
+            <li data-target="#burger-carousel" data-slide-to="2"></li>
+            <li data-target="#burger-carousel" data-slide-to="3"></li>
+            <li data-target="#burger-carousel" data-slide-to="4"></li>
+            <li data-target="#burger-carousel" data-slide-to="5"></li>
+            <li data-target="#burger-carousel" data-slide-to="6"></li>
+            <li data-target="#burger-carousel" data-slide-to="7"></li>
+        </ol>
+        
+        {{!-- Wrapper for slides --}}
+        <div class="carousel-inner">
+
+            {{!-- Burgers --}}
+            <div class="carousel-item active">
+                <img src="../assets/images/BurgerSign.jpg" class="d-block w-100" alt="BJJ's Burgers">
+                <div class="carousel-caption">
+                    <h3 class="text">Welcome!</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/RNCBacon.jpg" class="d-block w-100" alt="RNC Bacon Burger">
+                <div class="carousel-caption">
+                    <h3 class="text">RNC Bacon Burger</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/OmoplataPlatter.jpg" class="d-block w-100" alt="Omoplata Platter">
+                <div class="carousel-caption">
+                    <h3 class="text">Omoplata Platter</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/ArmBarClassic.jpg" class="d-block w-100" alt="Arm Bar Classic Burger">
+                <div class="carousel-caption">
+                    <h3 class="text">Arm Bar Classic</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/Bow&ArrowBoca.jpg" class="d-block w-100" alt="Bow & Arrow Boca Burger">
+                <div class="carousel-caption">
+                    <h3 class="text">Bow&amp;Arrow Boca Burger</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/TripleFlyingTriangle.jpg" class="d-block w-100" alt="Triple Flying Triangle Burger">
+                <div  class="carousel-caption">
+                    <h3 class="text">Triple Flying Triangle</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/KimuraChicken.jpg" class="d-block w-100" alt="Kimura Chicken Burger">
+                <div class="carousel-caption">
+                    <h3 class="text">Kimura Chicken Burger</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/LegLockinWings.jpg" class="d-block w-100" alt="Log Lockin Wings">
+                <div class="carousel-caption">
+                    <h3 class="text">Leg Lockin Wings</h3>
+                </div>
+            </div>
+        </div>
+        <a 
+            class="carousel-control-prev" 
+            href="#burger-carousel" 
+            role="button" 
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden sr-only"></span>
+        </a>
+        <a 
+            class="carousel-control-next" 
+            href="#burger-carousel" 
+            role="button" 
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+        </a>
+    </div>
+</header>
+<section class="container-fluid d-flex flex-column align-items-center">
     <h2>Submit to the best burgers in town! </h2>
     <p>Tap out your hunger with the classic Americana. Or go big with Tripple Flying
         Triangle. At BJJ's Burgers we grapple with only the freshest ingredients. All you have to do is <span>bump,
             slap, and tap</span> that burger.</p>
-</header>
+</section>
 
-<main>
+<main class="container-fluid d-flex flex-column align-items-center">
     <section>
         <h2>Add a Burger Submission</h2>
         <form class="create-burger">

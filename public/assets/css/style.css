@@ -1,20 +1,28 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+.title-container {
+  height: 15vh;
+  padding: 1rem 0;
+  background-color: rgb(34, 33, 33);
+  position: relative;
+}
+
+#bjjHeader {
+  color: white;
+  font-weight: bolder;
+}
+
+.carousel-inner {
+  height: auto;
+}
+
+.carousel-item {
+  background-color: black;
+}
+
+.carousel-item img {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-weight: bold;
+}
