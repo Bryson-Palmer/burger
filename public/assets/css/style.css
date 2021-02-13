@@ -1,7 +1,7 @@
 /* Body */
 .burger-body {
   height: 100% !important;
-  background-image: linear-gradient(180deg,rgb(247, 38, 38), rgb(252, 88, 23));
+  background-image: linear-gradient(180deg,rgb(247, 38, 38), rgb(192, 69, 21));
 }
 
 /* Head container */
@@ -100,6 +100,7 @@
 /* Modal container */
 #burgerModal {
   margin-top: 3rem;
+  
 }
 
 /* Mission statement */
@@ -314,12 +315,14 @@
 /* Burger item name */
 .burger-item {
   margin: 1rem 0;
+  font-family: 'Reggae One', cursive;
   text-align: center;
   font-size: 1.5rem;
 }
 
 /* Button box for burger item */
 .btn-box {
+  font-family: var(--bs-font-sans-serif);
   padding-bottom: 1rem;
 }
 
@@ -428,6 +431,11 @@
   /* Carousel image */
   .carousel-item img {
     border-radius: 1rem 1rem 1rem 1rem;
+  }
+
+  /* Burger Mission */
+  .burger-mission {
+    max-width: 100%;
   }
 
   /* Brand name */
@@ -642,6 +650,11 @@
   /* Status title text */
   .status-text {
     width: 100%;
+    font-size: 2rem;
+  }
+
+  /* Burger each new item */
+  .burger-item {
     font-size: 2rem;
   }
  
