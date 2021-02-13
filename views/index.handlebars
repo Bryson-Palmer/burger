@@ -1,14 +1,10 @@
-<header>
-    <div class="title-container d-flex flex-column align-items-center">
-        <h1 id="bjjHeader" class="">BJJ's Burgers</h1>
-        <img src="../assets/images/redBelt.png" alt="BJJ red belt" class="redBelt" width="150px" height="75px">
-    </div>
+<header class="d-flex flex-column align-items-center burger-head">
 
     {{!-- Carousel wrapper --}}
     <div id="burger-carousel" class="carousel slide" data-bs-ride="carousel">
 
         {{!-- Indicators --}}
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators pb-0">
             <li data-target="#burger-carousel" data-slide-to="0" class="active"></li>
             <li data-target="#burger-carousel" data-slide-to="1"></li>
             <li data-target="#burger-carousel" data-slide-to="2"></li>
@@ -18,7 +14,7 @@
             <li data-target="#burger-carousel" data-slide-to="6"></li>
             <li data-target="#burger-carousel" data-slide-to="7"></li>
         </ol>
-        
+
         {{!-- Wrapper for slides --}}
         <div class="carousel-inner">
 
@@ -54,8 +50,9 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="../assets/images/TripleFlyingTriangle.jpg" class="d-block w-100" alt="Triple Flying Triangle Burger">
-                <div  class="carousel-caption">
+                <img src="../assets/images/TripleFlyingTriangle.jpg" class="d-block w-100"
+                    alt="Triple Flying Triangle Burger">
+                <div class="carousel-caption">
                     <h3 class="text">Triple Flying Triangle</h3>
                 </div>
             </div>
@@ -72,74 +69,99 @@
                 </div>
             </div>
         </div>
-        <a 
-            class="carousel-control-prev" 
-            href="#burger-carousel" 
-            role="button" 
-            data-bs-slide="prev"
-        >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <a class="carousel-control-prev" href="#burger-carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon icon-circle" aria-hidden="true"></span>
             <span class="visually-hidden sr-only"></span>
         </a>
-        <a 
-            class="carousel-control-next" 
-            href="#burger-carousel" 
-            role="button" 
-            data-bs-slide="next"
-        >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <a class="carousel-control-next" href="#burger-carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon icon-circle" aria-hidden="true"></span>
             <span class="visually-hidden"></span>
         </a>
     </div>
 </header>
-<section class="container-fluid d-flex flex-column align-items-center">
-    <h2>Submit to the best burgers in town! </h2>
-    <p>Tap out your hunger with the classic Americana. Or go big with Tripple Flying
-        Triangle. At BJJ's Burgers we grapple with only the freshest ingredients. All you have to do is <span>bump,
-            slap, and tap</span> that burger.</p>
-</section>
 
-<main class="container-fluid d-flex flex-column align-items-center">
-    <section>
-        <h2>Add a Burger Submission</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 326 200">
+    <path fill="black" fill-opacity="1"
+        d="M0,224L60,192C120,160,240,96,360,106.7C480,117,600,203,720,208C840,213,960,139,1080,106.7C1200,75,1320,85,1380,90.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+    </path>
+</svg>
+
+<main class="container-fluid d-flex flex-column align-items-center burger-main">
+
+    <!-- Vertically centered modal -->
+    <div class="container d-flex flex-column">
+        <h1 id="bjjTitle">BJJ's Burgers</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="belt-btn animate__animated animate__rubberBand" data-bs-toggle="modal" data-bs-target="#burgerModal">
+            <img src="../assets/images/redBelt.png" alt="BJJ red belt">
+        </button>
+        <p class="tap-it">Tap it!</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="burgerModal" tabindex="-1" aria-labelledby="#burgerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content burger-mission">
+                    <div class="modal-header burger-header">
+                        <h3 class="modal-title" id="burgerModalLabel">Submit to the best burgers in town!</h3>
+                        <button type="button" class="btn-close mb-5" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tap out your hunger with the classic Americana. Or go big with Tripple Flying
+                            Triangle. At BJJ's Burgers we grapple with only the freshest ingredients. All you have to do
+                            is <span>bump,
+                                slap, and tap</span> that burger.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="burger-box">
+
+        <h2 class="burger-title">Add a Burger Submission</h2>
         <form class="create-burger">
 
             <div class="burger-data">
-                <label for="brgr">Create a new BJJ Burger</label>
-                <input type="text" id="brgr" name="title">
+                <label class="new-label" for="brgr">Create a new <span>BJJ</span> Burger</label>
+                <input class="new-input" type="text" id="brgr" name="title">
             </div>
 
             <div class="burger-data">
-                <label for="devoured">Are you hungry?</label><br>
-                <input type="radio" name="devoured" value="0" checked> So hungry!<br>
-                <input type="radio" name="devoured" value="1"> I'm all tapped out!
+                <div class="radio-btn">
+                    <label for="devoured">Are you hungry?</label><br>
+                    <input type="radio" name="devoured" value="0" checked> So hungry!<br>
+                    <input type="radio" name="devoured" value="1"> I'm all tapped out!
+                </div>
+                <button class="sbmt-btn" type="submit">Submit Burger</button>
             </div>
 
-            <button type="submit">Submit Burger</button>
         </form>
     </section>
 
     <div class="status-box">
-        <h2 class="title">Contenders</h2>
-        <p>These burgers still need to be tapped out.</p>
+        <div class="status-inner">
+            <h2 class="status-title">Contenders</h2>
+            <p class="status-text">These burgers still need to be tapped out.</p>
 
-        <ul class="burger-list">
-            {{#each burgers}}
-            {{#unless devoured}}
-            {{> burgers/burger-block devouring=true}}
-            {{/unless}}
-            {{/each}}
-        </ul>
+            <ul class="burger-list">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devouring=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="status-inner">
+            <h2 class="status-title">Tapped Out</h2>
+            <p class="status-text">These burgers have been devoured.</p>
 
-        <h2 class="title">Tapped Out</h2>
-        <p>These burgers have been devoured.</p>
-
-        <ul class="burger-list">
-            {{#each burgers}}
-            {{#if devoured}}
-            {{> burgers/burger-block devouring=false}}
-            {{/if}}
-            {{/each}}
-        </ul>
+            <ul class="burger-list">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devouring=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </main>

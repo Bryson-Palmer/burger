@@ -1,9 +1,13 @@
-<li>
+<p class="line"></p>
+<li class="burger-item">
+
     {{burger_names}}
 
-    <button class="devour-it" data-id="{{this.id}}" data-devoured="{{devouring}}">
-        {{#if devouring}}Devoured!{{else}}Devour it!{{/if}}
-    </button>
+    <div class="btn-box d-flex justify-content-center align-items-center">
+        <button class="devour-it" data-id="{{this.id}}" data-devoured="{{devouring}}">
+            {{#if devouring}}Devour it!{{else}}Devoured!{{/if}}
+        </button>
 
-    <button class="burger-obliviate" data-id="{{this.id}}">Burger Obliviate!</button>
+        <button class="burger-obliviate" data-id="{{this.id}}">Obliviate!</button>
+    </div>
 </li>
